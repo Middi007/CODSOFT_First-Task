@@ -1,0 +1,47 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    cout << "\n\n\tWelcome to The Number Guessing Game!!"<< endl;
+    cout << "Some Basic Rules --> \nSystem will choose a random number between 1 and 100. You have to guess that number\n\nGood Luck!!\n"<< endl;
+    while (true) {
+        cout << "Choices -->";
+        cout << "\n1 -> Start the Game!\n";
+        cout << "0 -> End the Game!\n" << endl;
+        int c;
+        cout << "Enter your Choice -> ";
+        cin >> c;
+        srand(time(0));
+        int s = 1 + (rand() % 100);
+        int p;
+        if (c == 1) {
+            cout << "<System> - Number Chosen!!\n";
+            for (int i = 1; i <= 10; i++) {
+                cout << "\nEnter the number -> ";
+                cin >> p;
+                if (p == s) {
+                    cout << "Congratulations!!...You Found the Secret Number which is - "<< p <<"\n\n" << endl;
+                    break;
+                }
+                else {
+                    cout << "OOPS!!, " << p
+                         << " is not the right number!!\n";
+                    if (p > s) {
+                        cout << "The secret number is smaller than the number you have chosen" << endl;
+                    }
+                    else {
+                        cout << "The secret number is greater than the number you have chosen"<< endl;
+                    }
+                }
+            }
+        }
+        else if (c == 0){
+            cout << "\nHave a Nice Day!!";
+            exit(0);
+        }
+        else {
+            cout << "Wrong Choice!! Enter the correct choice to start/end the game!!"<< endl;
+        }
+    }
+    return 0;
+}
