@@ -1,2 +1,4 @@
-# CODSOFT_First-Task
-NUMBER GUESSING GAME
+# CODSOFT_Internship
+First - NUMBER GUESSING GAME
+Second - Simple Calculator
+Third - Student Grading System
