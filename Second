@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main(){
+    char character;
+    float a, b;
+    cout<<"Enter Two Numbers --> "<<endl;
+    cin>>a>>b;
+    cout<<"\nEnter the Operator --> \n+ (Add) \n- (Subtract) \n* (Multiply) \n/ (Divide)\n"<<endl;
+    cin>>character;
+    switch(character){
+    case '+':
+        cout<<"You chose Addition!!\n";
+        cout<<a<<" + "<<b<<" = "<<a+b;
+        break;
+    case '-':
+        cout<<"You chose Subtraction!!\n";
+        cout<<a<<" - "<<b<<" = "<<a-b;
+        break;
+    case '*':
+        cout<<"You chose Multiplication!!\n";
+        cout<<a<<" * "<<b<<" = "<<a*b;
+        break;
+    case '/':
+        cout<<"You chose Division!!\n";
+        cout<<a<<" / "<<b<<" = "<<a/b;
+        break;
+    default:
+        cout << "Wrong Input!! ERROR!!";
+        break;
+    }
+    return 0;
+}
