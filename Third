@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+struct Student {
+    string name;
+    double grade;
+};
+int main() {
+    vector<Student> students;
+    int student_num;
+    cout << "Enter the Total Number of Students -> ";
+    cin >> student_num;
+    for (int i = 0; i < student_num; ++i) {
+        Student student;
+        cout << "Enter the Name of Student " << i + 1 << ": "<<endl;
+        cin >> student.name;
+        cout << "Enter the Grade of Student " << i + 1 << ": "<<endl;
+        cin >> student.grade;
+        students.push_back(student);
+    }
+    double sumGrades = 0.0;
+    for (const auto& student : students) {
+        sumGrades += student.grade;
+    }
+    double ag = sumGrades / student_num;
+    double hg = students[0].grade;
+    double lg = students[0].grade;
+    for (const auto& student : students) {
+        hg = max(hg, student.grade);
+        lg = min(lg, student.grade);
+    }
+    cout << "\nStudent Grades Summary:\n";
+    for (const auto& student : students) {
+        cout << student.name << ": " << student.grade << endl;
+    }
+    cout << "\nAverage Grade: " << ag << endl;
+    cout << "Highest Grade: " << hg << endl;
+    cout << "Lowest Grade: " << lg << endl;
+    return 0;
+}
